@@ -1,6 +1,6 @@
 {
-    "name" : "封面领取攻略",
-    "appid" : "__UNI__92DC1D4",
+    "name" : "微信红包封面",
+    "appid" : "",
     "description" : "",
     "versionName" : "1.0.0",
     "versionCode" : "100",
@@ -50,7 +50,7 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "wx566181a585c8d597",
+        "appid" : "",
         "setting" : {
             "urlCheck" : false,
             "minified" : true
