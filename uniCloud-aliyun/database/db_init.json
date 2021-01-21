@@ -1,0 +1,109 @@
+// 在本文件中可配置云数据库初始化，数据格式见：https://uniapp.dcloud.io/uniCloud/hellodb?id=db-init
+
+// 编写完毕后对本文件点右键，可按配置规则创建表和添加数据
+
+{
+    "ad": {
+        "data": []
+    },
+    "config": {
+        "data": [
+            {
+                "name": "tips",
+                "value": [
+                    "小疯子 已成功领取一款红包封面",
+                    "阿江 已成功领取一款红包封面",
+                    "蛋蛋互娱 已成功领取一款红包封面",
+                    "安然gril 已成功领取一款红包封面"
+                ]
+            },
+            {
+                "name": "ad",
+                "value": {
+                    "detail": {
+                        "one": "广告位id1",
+                        "two": "广告位id2",
+                        "three": "广告位id3",
+                        "four": "广告位id4",
+                        "five": "广告位id5"
+                    }
+                }
+            }
+        ]
+    },
+    "coupon": {
+        "data": [
+            {
+                "icon": "http://5b0988e595225.cdn.sohucs.com/images/20190123/d9dbc7295ee84f1dab526426690149f2.jpeg",
+                "minapp": {
+                    "appid": "wxece3a9a4c82f58c9",
+                    "path": "pages/sharePid/web/index?scene=https://s.click.ele.me/wR9ecuu"
+                },
+                "name": "饿了么红包",
+                "desc": "最高56元",
+                "tip": "每日可领",
+                "border": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-3fghygksin4v59ee5a/616cd130-548f-11eb-8ff1-d5dcf8779628.png",
+                "sort": 100,
+                "platform": "ele"
+            },
+            {
+                "icon": "http://tb1.bdstatic.com/tb/r/image/2017-03-03/795fda7b64093fce5e5ed440d325a48f.jpeg",
+                "minapp": {
+                    "appid": "wxde8ac0a21135c07d",
+                    "path": "/index/pages/h5/h5?lch=mhqIykekFEV63u81zLSTaQViQ&noshare=1&f_userId=0&f_openId=0&f_token=1&weburl=https%3A%2F%2Fact6.meituan.com%2Fclover%2Fpage%2Fadunioncps%2Fshare_coupon_new%3FutmSource%3D56020%26utmMedium%3D3D52DEF4438AE63F0FBF09E13E5B1B8E%26promotionId%3D21034%26activity%3DOwMkGzn6oK"
+                },
+                "name": "美团外卖红包",
+                "desc": "最高48元",
+                "tip": "每日可领",
+                "border": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-3fghygksin4v59ee5a/616cd130-548f-11eb-8ff1-d5dcf8779628.png",
+                "sort": 99,
+                "platform": "meituan"
+            },
+            {
+                "icon": "http://tb1.bdstatic.com/tb/r/image/2017-03-03/795fda7b64093fce5e5ed440d325a48f.jpeg",
+                "minapp": {
+                    "appid": "wxde8ac0a21135c07d",
+                    "path": "/index/pages/h5/h5?lch=mhqIykekFEV63u81zLSTaQViQ&noshare=1&f_userId=0&f_openId=0&f_token=1&weburl=https%3A%2F%2Fact6.meituan.com%2Fclover%2Fpage%2Fadunioncps%2Fshare_coupon_new%3FutmSource%3D56020%26utmMedium%3D3D52DEF4438AE63F0FBF09E13E5B1B8E%26promotionId%3D21034%26activity%3DOwMkGzn6oK"
+                },
+                "name": "美团吃喝玩乐",
+                "desc": "百万补贴",
+                "tip": "先到先得",
+                "border": "",
+                "sort": 98,
+                "platform": "meituan"
+            },
+            {
+                "icon": "http://tb1.bdstatic.com/tb/r/image/2017-03-03/795fda7b64093fce5e5ed440d325a48f.jpeg",
+                "minapp": {
+                    "appid": "wxde8ac0a21135c07d",
+                    "path": "/index/pages/h5/h5?lch=mhqIykekFEV63u81zLSTaQViQ&noshare=1&f_userId=0&f_openId=0&f_token=1&weburl=https%3A%2F%2Fact6.meituan.com%2Fclover%2Fpage%2Fadunioncps%2Fshare_coupon_new%3FutmSource%3D56020%26utmMedium%3D3D52DEF4438AE63F0FBF09E13E5B1B8E%26promotionId%3D21034%26activity%3DOwMkGzn6oK"
+                },
+                "name": "美团酒店红包",
+                "desc": "百万补贴",
+                "tip": "先到先得",
+                "border": "",
+                "sort": 98,
+                "platform": "meituan"
+            }
+        ]
+    },
+    "cover": {
+        "data": [
+            {
+                "pic": "https://img.tuguaishou.com/ips_templ_preview/w432_q100/13/33/9e/lg_3408105_1603196228_5f8ed544823c6.jpg?auth_key=2243088000-0-0-f00b740f54e472a1c784ef26653d85c8",
+                "inviteLockNum": 10,
+                "lookVideoLockNum": 10,
+                "getDesc": "添加微信：mpcollect\n发送 2021 即可领取"
+            }
+        ]
+    },
+    "invite": {
+        "data": [
+
+        ]
+    },
+    "user": {
+        "data": [
+        ]
+    }
+}
