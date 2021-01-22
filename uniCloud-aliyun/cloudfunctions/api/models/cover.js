@@ -28,7 +28,7 @@ var cover = {
 			}).count()
 		let lookVideoLockNum = adLookVideo.total
 		let inviteLockNum = invite.total
-		if((lookVideoLockNum > 0 && lookVideoLockNum >= detail.data[0].lookVideoLockNum) || (inviteLockNum > 0 && inviteLockNum >= detail.data[0].inviteLockNum)){
+		if(detail.data[0].isFree || ((lookVideoLockNum > 0 && lookVideoLockNum >= detail.data[0].lookVideoLockNum) || (inviteLockNum > 0 && inviteLockNum >= detail.data[0].inviteLockNum))){
 			var isLocked = true
 		}else{
 			var isLocked = false

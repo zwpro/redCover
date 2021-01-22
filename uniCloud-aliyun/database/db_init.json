@@ -93,6 +93,7 @@
                 "pic": "https://img.tuguaishou.com/ips_templ_preview/w432_q100/13/33/9e/lg_3408105_1603196228_5f8ed544823c6.jpg?auth_key=2243088000-0-0-f00b740f54e472a1c784ef26653d85c8",
                 "inviteLockNum": 10,
                 "lookVideoLockNum": 10,
+                "isFree": false,
                 "getDesc": "添加微信：mpcollect\n发送 2021 即可领取"
             }
         ]
