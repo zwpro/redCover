@@ -2,7 +2,6 @@ const db = uniCloud.database();
 
 var invite = {
     add: async (req) => {
-		req = JSON.parse(req)
 		var inviteQuery = await db.collection('invite').where({
 			openid: req.openid,
 		}).get();

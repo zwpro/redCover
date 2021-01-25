@@ -38,7 +38,7 @@ exports.main = async (event, context) => {
 			break;
 		//邀请关系
 		case '/invite/track':
-			var inviteAdd = await inviteModel.add(event.body)
+			var inviteAdd = await inviteModel.add(event.queryStringParameters)
 			resp = inviteAdd
 			return response.success(resp)
 			break;
