@@ -28,6 +28,7 @@
 </template>
 
 <script>
+	import { cover } from '../../request'
 	export default {
 		data() {
 			return {
@@ -48,21 +49,15 @@
 				    url: `/pages/detail/detail?id=${id}`
 				});
 			},
-			getCoverList(){
+			async getCoverList(){
 				uni.showLoading({
 					title: "获取封面中"
 				})
-				uni.request({
-					url: getApp().globalData.api.cover,
-					success: (res) => {
-						this.couponList = res.data.data.couponList
-						this.coverList = res.data.data.coverList
-						this.tips = res.data.data.tips
-					},
-					complete() {
-						uni.hideLoading()
-					}
-				})
+				const res = await cover()
+				this.couponList = res.result.data.couponList
+				this.coverList = res.result.data.coverList
+				this.tips = res.result.data.tips
+				uni.hideLoading()
 			},
 			toCoupon(i){
 				console.log(this.couponList[i])
