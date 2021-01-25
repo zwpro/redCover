@@ -35,7 +35,7 @@ async function lookVideo(queryStringParameters = {}) {
 async function inviteTrack(queryStringParameters = {}) {
     const res = await uniCloud.callFunction({
         name: "api",
-        data: { path: '/invite/track', queryStringParameters },
+        data: { path: '/invite/track', body: JSON.stringify(queryStringParameters) },
     });
     return res
 }
