@@ -36,6 +36,8 @@
 </template>
 
 <script>
+import { coverDetail, lookVideo } from '../../request';
+
 var rewardedVideoAd = null
 // 在页面中定义插屏广告
 var interstitialAd = null
@@ -74,34 +76,27 @@ export default {
 		handle(){
 			return
 		},
-		getCoverDetail(isFirst){
-			uni.request({
-				url: getApp().globalData.api.coverDetail,
-				data: {
-					id: this.id,
-					openid: getApp().globalData.openid,
-				},
-				success: (res) => {
-					this.coverDetail = res.data.data.coverDetail
-					this.lockEdInfo = res.data.data.lockEdInfo
-					this.ad = res.data.data.ad
-					if(isFirst && this.ad){
-						//激励视频和插屏广告
-						if(this.ad.one){
-							this.adinsertInit(this.ad.one)
-						}
-						if(this.ad.five){
-							this.adInit(this.ad.five);
-						}
-					}
-					if(this.lockEdInfo.isLocked){
-						this.modalShow = true
-					}
-				},
-				complete() {
-					uni.hideLoading()
-				}
+		async getCoverDetail(isFirst){
+			const res = await coverDetail({
+				id: this.id,
+				openid: getApp().globalData.openid,
 			})
+			this.coverDetail = res.result.data.coverDetail
+			this.lockEdInfo = res.result.data.lockEdInfo
+			this.ad = res.result.data.ad
+			if(isFirst && this.ad){
+				//激励视频和插屏广告
+				if(this.ad.one){
+					this.adinsertInit(this.ad.one)
+				}
+				if(this.ad.five){
+					this.adInit(this.ad.five);
+				}
+			}
+			if(this.lockEdInfo.isLocked){
+				this.modalShow = true
+			}
+			uni.hideLoading()
 		},
 		lookAd() {
 			rewardedVideoAd.show().catch(() => {
@@ -156,17 +151,11 @@ export default {
 			}
 		},
 		//看视频上班
-		trackLookVideo(isEnded){
-			uni.request({
-				url: getApp().globalData.api.lookVideo,
-				data: {
-					openid: getApp().globalData.openid,
-					id: this.id,
-					isEnded,
-				},
-				success: (res) => {
-
-				},
+		async trackLookVideo(isEnded){
+			await lookVideo({
+				openid: getApp().globalData.openid,
+				id: this.id,
+				isEnded,
 			})
 		},
 		openModal(){
