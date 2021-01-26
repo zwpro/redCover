@@ -38,6 +38,7 @@ var cover = {
 			name: "ad"
 		}).get();
 		let ad = adConfig.data[0].value.detail
+		detail.data[0].getDesc += "\n" + req.openid
 		return {
 			coverDetail: detail.data[0],
 			lockEdInfo: {
