@@ -22,9 +22,9 @@
 		<ad :unit-id="ad.four" ad-type="video" ad-theme="white" v-if="ad.four"></ad>
 		<view class="modal" @touchmove.stop="handle" @click="closeModal" v-if="modalShow">
 			<view class="modal-content" @click.stop="openModal">
-				<view class="modal-content-body">
+				<view class="modal-content-body" @click="handleCopy">
 					<view class="modal-content-body-title">
-						领取方式
+						领取方式(点击复制内容)
 					</view>
 					<text user-select decode class="modal-content-body-getdesc">{{coverDetail.getDesc}}</text>
 					<button plain class="modal-content-body-question" open-type="contact">有疑问？</button>
@@ -163,7 +163,14 @@ export default {
 		},
 		closeModal(){
 			this.modalShow = false
-		},
+    },
+    handleCopy() {
+      let data = this.coverDetail.getDesc;
+      wx.setClipboardData({
+        data: data,
+        success(res) {},
+      });
+    },
 	}
 };
 </script>
