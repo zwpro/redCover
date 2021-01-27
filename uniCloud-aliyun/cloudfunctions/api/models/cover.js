@@ -20,7 +20,7 @@ var cover = {
 		let adLookVideo = await db.collection('ad').where({
 				openid: req.openid,
 				id: req.id,
-				isEnded: "true",
+				isEnded: true,
 			}).count()
 		let invite = await db.collection('invite').where({
 				inviteOpenid: req.openid,
