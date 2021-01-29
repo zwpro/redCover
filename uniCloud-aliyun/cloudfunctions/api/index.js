@@ -22,6 +22,7 @@ exports.main = async (event, context) => {
 			resp.couponList = await coverModel.coupons()
 			resp.coverList = await coverModel.list()
 			resp.tips = await coverModel.tips()
+			resp.ads = await coverModel.ads()
 			return response.success(resp)
 			break;
 		//封面详情

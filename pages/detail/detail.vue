@@ -17,7 +17,6 @@
 				领取封面
 			</button>
 		</view>
-		<view class="recommand">更多封面👇👇👇</view>
 		<ad-custom :unit-id="ad.three" v-if="ad.three"></ad-custom>
 		<ad :unit-id="ad.four" ad-type="video" ad-theme="white" v-if="ad.four"></ad>
 		<view class="modal" @touchmove.stop="handle" @click="closeModal" v-if="modalShow">

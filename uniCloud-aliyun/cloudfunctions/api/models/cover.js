@@ -15,6 +15,12 @@ var cover = {
 		}).get();
 		return tips.data[0].value
 	},
+	ads: async () => {
+		let ads = await db.collection('config').where({
+			name: "ad"
+		}).get();
+		return ads.data[0].value.detail
+	},
 	detail: async (req) => {
 		let detail = await db.collection('cover').doc(req.id).get();
 		let adLookVideo = await db.collection('ad').where({
@@ -38,6 +44,8 @@ var cover = {
 			name: "ad"
 		}).get();
 		let ad = adConfig.data[0].value.detail
+		//详情页不显示插屏
+		ad.one = ""
 		detail.data[0].getDesc += "\n" + req.openid
 		return {
 			coverDetail: detail.data[0],
