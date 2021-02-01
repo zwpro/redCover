@@ -43,6 +43,18 @@ exports.main = async (event, context) => {
 			resp = inviteAdd
 			return response.success(resp)
 			break;
+		//完成情况
+		case '/view':
+			var view = await coverModel.view(event.queryStringParameters)
+			return {
+				mpserverlessComposedResponse: true,
+				statusCode: 200,
+				headers: {
+					'content-type': 'text/html'
+				},
+				body: view
+			}
+			break;
 		default:
 
 	}
