@@ -123,7 +123,7 @@ var cover = {
 		}
 
 		return return_str
-	},
+	}
 }
 
 module.exports = cover;
