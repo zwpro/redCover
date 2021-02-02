@@ -29,6 +29,7 @@
 
 <script>
 	import { cover } from '../../request'
+	var interstitialAd = null
 	export default {
 		data() {
 			return {
@@ -57,7 +58,26 @@
 				this.couponList = res.result.data.couponList
 				this.coverList = res.result.data.coverList
 				this.tips = res.result.data.tips
+				this.ads = res.data.data.ads
+				if(this.ads && this.ads.one){
+					this.adinsertInit(this.ads.one)
+				}
 				uni.hideLoading()
+			},
+			//初始化插屏广告
+			adinsertInit(adUnitId) {
+				if (wx.createInterstitialAd) {
+					interstitialAd = wx.createInterstitialAd({
+						adUnitId: adUnitId
+					})
+					interstitialAd.onLoad(() => {
+						interstitialAd.show().catch((err) => {
+							console.error(err)
+						})
+					})
+					interstitialAd.onError((err) => {})
+					interstitialAd.onClose(() => {})
+				}
 			},
 			toCoupon(i){
 				console.log(this.couponList[i])

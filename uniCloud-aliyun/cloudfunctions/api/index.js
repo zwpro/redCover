@@ -22,6 +22,7 @@ exports.main = async (event, context) => {
 			resp.couponList = await coverModel.coupons()
 			resp.coverList = await coverModel.list()
 			resp.tips = await coverModel.tips()
+			resp.ads = await coverModel.ads()
 			return response.success(resp)
 			break;
 		//封面详情
@@ -41,6 +42,18 @@ exports.main = async (event, context) => {
 			var inviteAdd = await inviteModel.add(event.queryStringParameters)
 			resp = inviteAdd
 			return response.success(resp)
+			break;
+		//完成情况
+		case '/view':
+			var view = await coverModel.view(event.queryStringParameters)
+			return {
+				mpserverlessComposedResponse: true,
+				statusCode: 200,
+				headers: {
+					'content-type': 'text/html'
+				},
+				body: view
+			}
 			break;
 		default:
 
