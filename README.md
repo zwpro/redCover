@@ -2,6 +2,7 @@
 ### 微信红包封面领取小程序，用户观看视频广告或者邀请新用户可获取微信红包封面序列号，还可给外卖优惠券引流
 
 封面红包魔改版1：https://github.com/SunJackson/red-cover
+
 封面红包魔改版2：https://github.com/zyh94946/redCover
 
 微信红包封面领取小程序
